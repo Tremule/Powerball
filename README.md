@@ -1,3 +1,5 @@
 # Powerball
 Powerball number generator
-testing git update
+
+#Requirements
+To be added later
