@@ -9,12 +9,12 @@ def number_generator():
 		else : 
 			draw.append(ballvall)
 	powerball = (randint(1,42))
-	return sorted(draw), powerball	
+	return str(sorted(draw)).strip('[]'), powerball	
 
 def draw_number(sets):
 	for i in range(sets):
 		draw = number_generator()
-		print('Your numbers: {:<2}    \tPowerball: {}'.format(str(draw[0]).strip('[]'),draw[1]))
+		return('Your numbers: {:<2}    \tPowerball: {}'.format(str(draw[0]).strip('[]'),draw[1]))
 
 
 if __name__ == "__main__":
