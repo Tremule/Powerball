@@ -1,2 +1,4 @@
 __pycache__
 pballenv
+*.pyc
+config.py
