@@ -4,6 +4,20 @@
 	<title>Powerball Sim</title>
 </head>
 <body>
+<h1>The Powerball Simulator</h1>
+<p>A simple but fruitless lottery simulator</p>
+<hr>
+<br>
+<!-- this loop will display flashed Msg's-->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li style="color:red">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
 {% block body %}
 {% endblock %}
 </body>

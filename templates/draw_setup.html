@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block body %}
-	<h1>The Powerball Simulator</h1>
-	<div>A simple but fruitless lottery simulator</div><br><br>
 	<form action="" method="POST">
 	{{ form.hidden_tag() }}
 	{{ form.number_of_draws.label }} {{ form.number_of_draws(size=20) }}
-		<input type="submit" name="submit" value="draw">
+	<input type="submit" name="submit" value="draw">
 	</form>
 {% endblock %}
 

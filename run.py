@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from powerball import number_generator
 from forms import LottoSetup
 
@@ -14,12 +14,12 @@ def home():
             return render_template('draw.html',
                 number=number, power=power, num_draw=form.number_of_draws.data)
 
+        else:
+            flash('Something went wrong, try again')
+            return render_template('draw_setup.html', form=form)
+
     return render_template('draw_setup.html', form=form)
 
-@app.route('/draw')
-def draw():
-    number, power = number_generator()
-    return render_template('draw.html', number=number, power=power, num_draw='draw')    
 
 if __name__ == '__main__':
     app.run()
