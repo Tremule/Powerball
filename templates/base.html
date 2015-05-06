@@ -2,24 +2,37 @@
 <html lang="en">
 <head>
 	<title>Powerball Sim</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 </head>
 <body>
-<h1>The Powerball Simulator</h1>
-<p>A simple but fruitless lottery simulator</p>
-<hr>
-<br>
-<!-- this loop will display flashed Msg's-->
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li style="color:red">{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
-{% block body %}
-{% endblock %}
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<h1>The Powerball Simulator</h1>
+			<p>A simple but fruitless lottery simulator</p>
+		</div>
+	</nav>
+	<hr>
+	<br>
+	<!-- this loop will display flashed Msg's-->
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+	    <ul class=flashes>
+	    {% for message in messages %}
+	      <li style="color:red">{{ message }}</li>
+	    {% endfor %}
+	    </ul>
+	  {% endif %}
+	{% endwith %}
+	<div class="container">
+	{% block body %}
+	{% endblock %}
+	</div>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
 
