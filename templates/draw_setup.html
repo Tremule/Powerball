@@ -3,6 +3,9 @@
 	<form action="" method="POST">
 	{{ form.hidden_tag() }}
 	{{ form.number_of_draws.label }} {{ form.number_of_draws(size=20) }}
+	</br>
+	{{ form.cost_of_draw.label }} {{ form.cost_of_draw(size=20)}}
+	</br>
 	<input type="submit" name="submit" value="draw" class="btn btn-default">	
 	</form>
 {% endblock %}
